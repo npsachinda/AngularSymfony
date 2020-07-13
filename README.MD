@@ -1,4 +1,4 @@
-# Task Manager with Symfony & Angular
+# Login App with Symfony & Angular
 
 This is a FullStack App that combine a RESTFul API created in Symfony 3.3. In the client side, the data in managed by Angular 4, and use Bootstrap for layout.
 
@@ -34,7 +34,7 @@ this will generate a token, that will be required for all the authorizations val
 **User Details - http://127.0.0.1/OrangeHRM/backend/web/app_dev.php/user/detail/1  :: type POST**
 Body:
 
-*1 is the logged user id
+*1 is the logged user id  
 *key = authorization | value = eyJ0eXAi... (token returned by login)*
 
 
