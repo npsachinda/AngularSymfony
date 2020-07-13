@@ -1,0 +1,52 @@
+<header id="header">
+  <div class="navbar navbar-default">
+    <div class="navbar-header">
+
+      <!-- logo -->
+      <a class="navbar-brand" [routerLink]="['/']">
+        <img id="logo" src="./assets/img/index.png" height="45px">
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="nav navbar-nav">
+        <li routerLink="/home" routerLinkActive="active" >
+          <a [routerLink]="['/home']" *ngIf="identity && identity.sub" routerLinkActive="active-link">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            My Info
+          </a>
+        </li>
+        <li routerLink="/emp-data" routerLinkActive="active">
+          <a [routerLink]="['/emp-data']" *ngIf="identity && identity.sub">
+            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+            Employee Data
+          </a>
+        </li>
+        <li routerLink="/leave" routerLinkActive="active">
+          <a [routerLink]="['/leave']" *ngIf="identity && identity.sub">
+            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+            Leave
+          </a>
+        </li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right" *ngIf="!identity">
+        <li><a [routerLink]="['/login']">Login</a></li>
+    
+        
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right" *ngIf="identity && identity.sub">
+        <li>
+          <a [routerLink]="['/login',1]" >
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+            Logout
+          </a>
+        </li>
+        </ul>
+    </div>
+
+  </div>
+</header>  
+
+  <router-outlet></router-outlet>

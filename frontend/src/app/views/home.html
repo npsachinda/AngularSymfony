@@ -1,0 +1,23 @@
+<div class="col-md-12">
+	
+	<div class="loader" *ngIf="loading === 'show'">
+		<img src="assets/img/loader.gif" />
+	</div>
+
+	<div class="col-md-12" *ngIf="user">
+
+		<div class="panel panel-default task-data">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+				Name: <strong>{{user.firstname +' '+user.lastname}}</strong><br><br>
+				Address: <strong>{{user.address }}</strong><br>
+				</h3>
+			</div>
+
+		</div>
+
+
+
+	</div>
+</div>
+
