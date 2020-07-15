@@ -47,7 +47,11 @@ Go to your "frontend folder", and in the CLI type:
 1. `npm install`
 2. Go to your file: "frontend/src/app/services/global.ts" and update to your API endpoint.
 3. `npm start`
-4. Check your http://localhost:4200/
+4. Check your browser http://localhost:4200/
 
 
+## Running the Unit Tests:
+
+1. Install PHPUnit(in case you don't have it). `sudo apt-get install -y phpunit` on Linux
+2. Go to inside the "backend" folder and run: `phpunit` 
 
